@@ -1,0 +1,46 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pkg3b;
+
+/**
+ *
+ * @author babu
+ */
+public class Main {
+    public static void main(String[] args) {
+        AdvancedAddition advancedAddition = new AdvancedAddition(5, 3, 4);
+        advancedAddition.Add();
+
+    }
+}
+
+class Addition {
+
+    double x, y;
+
+    public Addition(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public void Add() {
+        double sum = x + y;
+        System.out.println("sum two number :" + sum);
+    }
+}
+
+class AdvancedAddition extends Addition {
+
+    double z;
+
+    public AdvancedAddition(double z, double x, double y) {
+        super(x, y);
+
+        double sum2 = x + y + z;
+        System.out.println("sum three number: " + sum2);
+    }
+
+}
